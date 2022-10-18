@@ -113,7 +113,6 @@ def playgame(x,y):
     n=random.randint(0,len(wordlist)-1)
     diagramno=0
     word=wordlist[n]
-    print(word)
     word1=''
     for i in word:
         s=i+' '
