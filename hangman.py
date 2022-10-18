@@ -113,7 +113,6 @@ def playgame(x,y):
     n=random.randint(0,len(wordlist)-1)
     diagramno=0
     word=wordlist[n]
-    print(word)
     word1=''
     for i in word:
         s=i+' '
@@ -135,11 +134,8 @@ def playgame(x,y):
                 for j in range(len(word)):
                     if word[j]==choose:
                         space=space[:j*2]+word[j]+' '+space[(j+1)*2:]
-                    elif word[j] not in letters:
-                        print('Letter already guessed...')
-                        break
-                    else:
-                        letters.remove(word[j])
+                        if word[j] in letters:
+                            letters.remove(word[j])
                 if '_' not in space:
                     print(space)
                     print('Congratulations! you guessed the word.')
@@ -196,3 +192,4 @@ while True:
         break
     else:
         print('Invalid input')
+
