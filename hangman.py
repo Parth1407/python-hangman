@@ -179,6 +179,7 @@ def playgame(x,y):
                 print('Oops wrong guess!')
                 print('The word was',word)
                 print('You lost :(')
+                break
 
 #---------
 print('~ ~ ~ Welcome to Hangman ~ ~ ~')
